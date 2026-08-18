@@ -33,15 +33,15 @@ const Login = () => {
 
   const redirect = location.search ? location.search.split("=")[1] : "/";
 
-  // useEffect(() => {
-  //   if (isAuthenticated) {
-  //     navigate(redirect);
-  //   }
-  //   if (error) {
-  //     toast.error(error);
-  //     dispatch(clearErrors());
-  //   }
-  // }, [dispatch, isAuthenticated, error, navigate, redirect]);
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate(redirect);
+    }
+    if (error) {
+      toast.error(error);
+      dispatch(clearErrors());
+    }
+  }, [dispatch, isAuthenticated, error, navigate, redirect]);
 
   const submitHandler = (e) => {
     e.preventDefault();
