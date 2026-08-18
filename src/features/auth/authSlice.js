@@ -31,10 +31,11 @@ export const login = createAsyncThunk(
   async ({ email, password }, { rejectWithValue }) => {
     try {
       const { data } = await axios.post(
-        "/api/v1/login",
+        "/backend-shopy.vercel.app/api/v1/login",
         { email, password },
         { withCredentials: true }
       );
+      console.log(data);
       return data;
     } catch (error) {
       return rejectWithValue(error.response?.data?.message || "Login failed");
