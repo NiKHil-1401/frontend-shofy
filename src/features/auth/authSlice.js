@@ -29,6 +29,8 @@ export const register = createAsyncThunk(
 export const login = createAsyncThunk(
   "auth/login",
   async ({ email, password }, { rejectWithValue }) => {
+      console.log(email, password);
+
     try {
       const { data } = await axios.post(
         "/backend-shopy-pifubs7km-nikhil-c786.vercel.app/api/v2/login",
