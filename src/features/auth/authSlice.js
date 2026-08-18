@@ -31,7 +31,7 @@ export const login = createAsyncThunk(
   async ({ email, password }, { rejectWithValue }) => {
     try {
       const { data } = await axios.post(
-        "backend-shopy-1j9ast11d-nikhil-c786.vercel.app/api/v1/login",
+        "/backend-shopy-pifubs7km-nikhil-c786.vercel.app/api/v2/login",
         { email, password },
         { withCredentials: true }
       );
